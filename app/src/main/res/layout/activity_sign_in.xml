@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/baseline_event_repeat_24"
+        android:layout_marginTop="50dp"
+        android:contentDescription="logo_description" />
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImageView"
+        android:layout_marginTop="32dp"
+        android:hint="username"
+        android:inputType="text"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameEditText"
+        android:layout_marginTop="16dp"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:padding="12dp" />
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/passwordEditText"
+        android:layout_marginTop="24dp"
+        android:text="sign in"
+        android:background="@color/green"/>
+
+
+    <TextView
+        android:id="@+id/signUpLinkTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account? Sign Up"
+        android:textColor="@color/black"
+        android:layout_below="@id/signInButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="redirectToSignUp" />
+
+</RelativeLayout>
+

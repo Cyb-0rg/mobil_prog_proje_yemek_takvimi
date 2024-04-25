@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Food Menu Calendar!"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+    <Button
+        android:id="@+id/addMenuButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Menu"
+        android:layout_below="@id/welcomeTextView"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:id="@+id/viewMenuButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Menu"
+        android:layout_below="@id/addMenuButton"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/signOutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Out"
+        android:textColor="@color/red"
+        android:layout_below="@id/viewMenuButton"
+        android:layout_marginTop="16dp" />
+
+
+
+</RelativeLayout>
+
