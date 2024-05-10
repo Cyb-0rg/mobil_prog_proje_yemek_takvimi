@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/logoImageView"
         android:layout_marginTop="32dp"
-        android:hint="username"
+        android:hint="Email address"
         android:inputType="text"
         android:padding="12dp" />
 
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/usernameEditText"
         android:layout_marginTop="16dp"
-        android:hint="password"
+        android:hint="Password"
         android:inputType="textPassword"
         android:padding="12dp" />
 
@@ -60,6 +60,18 @@
         android:layout_marginTop="16dp"
         android:clickable="true"
         android:onClick="redirectToSignUp" />
+
+    <TextView
+        android:id="@+id/forgotPasswordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textColor="@color/black"
+        android:layout_below="@id/signUpLinkTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="redirectToForgotPassword" />
 
 </RelativeLayout>
 

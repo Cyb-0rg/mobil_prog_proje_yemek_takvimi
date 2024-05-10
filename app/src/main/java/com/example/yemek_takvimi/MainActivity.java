@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,8 +40,14 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    // Redirect to the SignInActivity
-    private void redirectToSignUp() {
+    public void redirectToForgotPassword(View view) {
+        Intent intent = new Intent(this, forgotPassword.class);
+        startActivity(intent);
+        finish(); // Optionally, finish the SignInActivity to prevent going back to it using the back button
+
+    }
+
+    public void redirectToSignUp() {
         Intent intent = new Intent(MainActivity.this, sign_up.class);
         startActivity(intent);
         finish(); // Optional: finish the MainActivity so that the user can't go back to it using the back button

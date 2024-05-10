@@ -88,4 +88,10 @@ public class sign_in extends AppCompatActivity {
         finish(); // Optionally, finish the SignInActivity to prevent going back to it using the back button
     }
 
+    public void redirectToForgotPassword(View view) {
+        Intent intent = new Intent(this, forgotPassword.class);
+        startActivity(intent);
+        finish(); // Optionally, finish the SignInActivity to prevent going back to it using the back button
+    }
+
 }
