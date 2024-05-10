@@ -85,13 +85,13 @@ public class sign_in extends AppCompatActivity {
     public void redirectToSignUp(View view) {
         Intent intent = new Intent(this, sign_up.class);
         startActivity(intent);
-        finish(); // Optionally, finish the SignInActivity to prevent going back to it using the back button
+        //finish(); // Optionally, finish the SignInActivity to prevent going back to it using the back button
     }
 
     public void redirectToForgotPassword(View view) {
         Intent intent = new Intent(this, forgotPassword.class);
         startActivity(intent);
-        finish(); // Optionally, finish the SignInActivity to prevent going back to it using the back button
+        //finish(); // Optionally, finish the SignInActivity to prevent going back to it using the back button
     }
 
 }

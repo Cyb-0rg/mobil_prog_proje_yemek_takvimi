@@ -34,7 +34,6 @@ public class sign_up extends AppCompatActivity {
 
     private EditText emailEditText;
     private EditText passwordEditText;
-    private Button signUpButton;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -46,7 +45,7 @@ public class sign_up extends AppCompatActivity {
 
         emailEditText = findViewById(R.id.usernameEditText_reg);
         passwordEditText = findViewById(R.id.passwordEditText_reg);
-        signUpButton = findViewById(R.id.signInButton_reg);
+        Button signUpButton = findViewById(R.id.signInButton_reg);
 
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,19 +94,13 @@ public class sign_up extends AppCompatActivity {
                                 }
                             }
                         }
-
                     });
-
-
         }
     }
 
     public void redirectToSignIn(View view) {
         Intent intent = new Intent(this, sign_in.class);
-
         startActivity(intent);
-
-        finish(); // Optionally, finish the SignUpActivity to prevent going back to it using the back button
     }
 
 

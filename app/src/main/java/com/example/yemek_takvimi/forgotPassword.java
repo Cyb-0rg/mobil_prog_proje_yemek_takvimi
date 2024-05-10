@@ -29,24 +29,7 @@ public class forgotPassword extends AppCompatActivity {
 
         eEmailAddres = findViewById(R.id.eEmailAddress_forgotPassword);
 
-
-        /*Toolbar toolbar = findViewById(R.id.toolbar_goback_to_signin);
-        setSupportActionBar(toolbar);
-
-        // Enable the up button (back arrow)
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
     }
-
-    /*private void setSupportActionBar(Toolbar toolbar) {
-        // Handle action bar item clicks
-        if (toolbar.getId() == android.R.id.home) {
-            // Respond to the action bar's Up/Home button
-            onBackPressed(); // Navigate back
-
-        }
-        super.onOptionsItemSelected(toolbar);
-    }*/
-
 
     public void resetPassword(View view) {
         String email = eEmailAddres.getText().toString().trim();;
@@ -74,14 +57,12 @@ public class forgotPassword extends AppCompatActivity {
     public void redirectToSignUp(View view) {
         Intent intent = new Intent(this, sign_up.class);
         startActivity(intent);
-        finish(); // Optionally, finish the SignInActivity to prevent going back to it using the back button
-
+        //finish();
     }
 
     public void goback_signin(View view) {
         Intent intent = new Intent(this, sign_in.class);
         startActivity(intent);
-        finish(); // Optionally, finish the SignInActivity to prevent going back to it using the back button
-
+        //finish();
     }
 }
