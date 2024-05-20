@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Yemek_takvimi"
         tools:targetApi="31">
         <activity
+            android:name=".MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".item_menu_day"
+            android:exported="false" />
+        <activity
             android:name=".edit_here"
             android:exported="false" />
         <activity

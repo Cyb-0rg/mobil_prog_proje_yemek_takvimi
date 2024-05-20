@@ -75,27 +75,29 @@ tools:context=".add_new_menu">
     <!-- DatePicker for Menu Date -->
     <TextView
         android:id="@+id/textViewMenuDate"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextCalorieCount"
         android:layout_marginTop="16dp"
         android:text="Select Date"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="12dp" />
 
-    <DatePicker
+<!--    <DatePicker
         android:id="@+id/datePickerMenuDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewMenuDate"
         android:layout_marginTop="8dp"
-        android:calendarViewShown="false" />
+        android:calendarViewShown="false" />-->
 
     <!-- Button to Add Menu -->
     <Button
         android:id="@+id/buttonAddMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/datePickerMenuDate"
+        android:layout_below="@id/textViewMenuDate"
         android:layout_marginTop="16dp"
         android:text="Add Menu"
         tools:ignore="HardcodedText"

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/item_background"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/textViewMenuDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/textViewMainDish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Main Dish"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/textViewSideDish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Side Dish"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/textViewSoup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soup"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/textViewDessertFruit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dessert/Fruit"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/textViewCalorieCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories"
+        android:textSize="16sp" />
+
+</LinearLayout>

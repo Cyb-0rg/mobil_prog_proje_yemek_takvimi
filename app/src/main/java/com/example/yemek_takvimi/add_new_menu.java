@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,10 +26,10 @@ import java.util.Map;
 public class add_new_menu extends AppCompatActivity {
     private Spinner spinnerFoodType;
     private EditText editTextMainDish, editTextSideDish, editTextSoup, editTextDessertFruit, editTextCalorieCount;
-    private DatePicker datePickerMenuDate;
-    private Button buttonAddMenu;
+    private TextView textViewMenuDate;
 
     private DatabaseReference databaseReference;
+    private Calendar calendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +46,19 @@ public class add_new_menu extends AppCompatActivity {
         editTextSoup = findViewById(R.id.editTextSoup);
         editTextDessertFruit = findViewById(R.id.editTextDessertFruit);
         editTextCalorieCount = findViewById(R.id.editTextCalorieCount);
-        datePickerMenuDate = findViewById(R.id.datePickerMenuDate);
-        buttonAddMenu = findViewById(R.id.buttonAddMenu);
+        textViewMenuDate = findViewById(R.id.textViewMenuDate);
+        Button buttonAddMenu = findViewById(R.id.buttonAddMenu);
 
         // Set minimum date to today
-        Calendar calendar = Calendar.getInstance();
-        datePickerMenuDate.setMinDate(calendar.getTimeInMillis());
+        calendar = Calendar.getInstance();
+
+        // Set OnClickListener for textViewMenuDate
+        textViewMenuDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog();
+            }
+        });
 
         // Set OnClickListener for Add Menu button
         buttonAddMenu.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +69,28 @@ public class add_new_menu extends AppCompatActivity {
         });
     }
 
+    private void showDatePickerDialog() {
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                this,
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        // Update the TextView with the selected date
+                        calendar.set(year, month, dayOfMonth);
+                        String selectedDate = dayOfMonth + "/" + (month + 1) + "/" + year;
+                        textViewMenuDate.setText(selectedDate);
+                    }
+                },
+                year, month, day
+        );
+        datePickerDialog.getDatePicker().setMinDate(calendar.getTimeInMillis());
+        datePickerDialog.show();
+    }
+
     private void addMenu() {
         String foodType = spinnerFoodType.getSelectedItem().toString();
         String mainDish = editTextMainDish.getText().toString().trim();
@@ -68,13 +98,9 @@ public class add_new_menu extends AppCompatActivity {
         String soup = editTextSoup.getText().toString().trim();
         String dessertFruit = editTextDessertFruit.getText().toString().trim();
         String calorieCount = editTextCalorieCount.getText().toString().trim();
+        String menuDate = textViewMenuDate.getText().toString().trim();
 
-        int day = datePickerMenuDate.getDayOfMonth();
-        int month = datePickerMenuDate.getMonth() + 1; // Month is 0-based in DatePicker
-        int year = datePickerMenuDate.getYear();
-        String menuDate = day + "/" + month + "/" + year;
-
-        if (foodType.isEmpty() || mainDish.isEmpty() || sideDish.isEmpty() || soup.isEmpty() || dessertFruit.isEmpty() || calorieCount.isEmpty()) {
+        if (foodType.isEmpty() || mainDish.isEmpty() || sideDish.isEmpty() || soup.isEmpty() || dessertFruit.isEmpty() || calorieCount.isEmpty() || menuDate.equals("Select Date")) {
             Toast.makeText(add_new_menu.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
         } else {
             checkDuplicateAndSaveMenu(foodType, mainDish, sideDish, soup, dessertFruit, calorieCount, menuDate);
@@ -83,7 +109,7 @@ public class add_new_menu extends AppCompatActivity {
 
     private void checkDuplicateAndSaveMenu(String foodType, String mainDish, String sideDish, String soup, String dessertFruit, String calorieCount, String menuDate) {
         databaseReference.orderByChild("MenuDate").equalTo(menuDate).addListenerForSingleValueEvent(new ValueEventListener() {
-
+            @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 boolean isDuplicate = false;
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
@@ -101,7 +127,7 @@ public class add_new_menu extends AppCompatActivity {
                 }
             }
 
-
+            @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(add_new_menu.this, "Failed to check duplicates. Please try again.", Toast.LENGTH_SHORT).show();
             }
