@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".add_new_menu">
+
+<RelativeLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <!-- Dropdown for Food Type -->
+    <Spinner
+        android:id="@+id/spinnerFoodType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:entries="@array/food_types"
+        android:layout_marginTop="50dp"/>
+
+    <!-- EditText for Main Dish -->
+    <EditText
+        android:id="@+id/editTextMainDish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerFoodType"
+        android:hint="Main Dish"
+        android:inputType="text" />
+
+    <!-- EditText for Side Dish -->
+    <EditText
+        android:id="@+id/editTextSideDish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextMainDish"
+        android:layout_marginTop="8dp"
+        android:hint="Side Dish"
+        android:inputType="text" />
+
+    <!-- EditText for Soup -->
+    <EditText
+        android:id="@+id/editTextSoup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextSideDish"
+        android:layout_marginTop="8dp"
+        android:hint="Soup"
+        android:inputType="text" />
+
+    <!-- EditText for Dessert/Fruit -->
+    <EditText
+        android:id="@+id/editTextDessertFruit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextSoup"
+        android:layout_marginTop="8dp"
+        android:hint="Dessert/Fruit"
+        android:inputType="text" />
+
+
+
+    <!-- EditText for Calorie Count -->
+    <EditText
+        android:id="@+id/editTextCalorieCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDessertFruit"
+        android:layout_marginTop="8dp"
+        android:hint="Calorie Count"
+        android:inputType="number" />
+
+    <!-- DatePicker for Menu Date -->
+    <TextView
+        android:id="@+id/textViewMenuDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCalorieCount"
+        android:layout_marginTop="16dp"
+        android:text="Select Date"
+        android:textSize="16sp" />
+
+    <DatePicker
+        android:id="@+id/datePickerMenuDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewMenuDate"
+        android:layout_marginTop="8dp"
+        android:calendarViewShown="false" />
+
+    <!-- Button to Add Menu -->
+    <Button
+        android:id="@+id/buttonAddMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datePickerMenuDate"
+        android:layout_marginTop="16dp"
+        android:text="Add Menu"
+        tools:ignore="HardcodedText"
+        android:onClick="add_menu"/>
+
+</RelativeLayout>
+</ScrollView>

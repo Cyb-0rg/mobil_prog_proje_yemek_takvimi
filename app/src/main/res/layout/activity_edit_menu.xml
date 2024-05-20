@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Date Selector -->
+        <DatePicker
+            android:id="@+id/datePickerEditMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:layout_marginTop="50dp"/>
+
+        <!-- Food Type Selector -->
+        <Spinner
+            android:id="@+id/spinnerFoodTypeEditMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:entries="@array/food_types"
+            android:layout_marginBottom="30dp"/>
+
+        <!-- Show Menu Button -->
+        <Button
+            android:id="@+id/buttonShowMenu"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Show Menu"
+            android:backgroundTint="@color/green"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="30dp"
+            />
+
+        <!-- Menu Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+             >
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!-- Date Header -->
+                <TextView
+                    android:id="@+id/textViewMenuDateEditMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today's Menu - [Selected Date]"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+
+                <!-- Menu Details (Main Dish, Side Dish, Soup, Dessert/Fruit, Calorie Count) -->
+                <TextView
+                    android:id="@+id/textViewMainDishEditMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Main Dish: [Main Dish Details]" />
+
+                <TextView
+                    android:id="@+id/textViewSideDishEditMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="side Dish: [side Dish Details]" />
+
+                <TextView
+                    android:id="@+id/textViewdessertEditMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dessert: [dessert Details]" />
+
+                <TextView
+                    android:id="@+id/textViewSoupEditMenu12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Soup: [soup Details]" />
+
+                <TextView
+                    android:id="@+id/textViewCalorieEditMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="calories: [calories Details]" />
+
+                <!-- Add more TextViews for other menu details -->
+
+                <!-- Edit and Delete Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonUpdateMenu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Edit"
+                        android:backgroundTint="@color/gray"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:id="@+id/buttonDeleteMenu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Delete"
+                        android:backgroundTint="@color/red"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

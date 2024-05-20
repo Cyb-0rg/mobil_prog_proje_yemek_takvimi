@@ -26,13 +26,14 @@
         android:layout_height="wrap_content"
         android:text="Add Menu"
         android:layout_below="@id/welcomeTextView"
-        android:layout_marginTop="32dp" />
+        android:layout_marginTop="32dp"
+        />
 
     <Button
         android:id="@+id/viewMenuButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View Menu"
+        android:text="View &amp; Edit Menu"
         android:layout_below="@id/addMenuButton"
         android:layout_marginTop="16dp" />
 

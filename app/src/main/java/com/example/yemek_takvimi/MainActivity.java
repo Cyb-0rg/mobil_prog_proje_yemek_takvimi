@@ -48,8 +48,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void redirectToSignUp() {
-        Intent intent = new Intent(MainActivity.this, sign_up.class);
+        Intent intent = new Intent(MainActivity.this, ana_menu.class);
         startActivity(intent);
         finish(); // Optional: finish the MainActivity so that the user can't go back to it using the back button
+
     }
+
+
 }

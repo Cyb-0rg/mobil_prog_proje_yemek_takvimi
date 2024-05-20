@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="food_types">
+        <item>Non-vegetarian</item>
+        <item>Vegetarian</item>
+<!--    <item>Vegan</item>-->
+    </string-array>
+</resources>
+

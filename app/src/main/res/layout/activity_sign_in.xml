@@ -16,7 +16,8 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/baseline_event_repeat_24"
         android:layout_marginTop="50dp"
-        android:contentDescription="logo_description" />
+        android:contentDescription="logo_description"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/usernameEditText"
@@ -26,7 +27,8 @@
         android:layout_marginTop="32dp"
         android:hint="Email address"
         android:inputType="text"
-        android:padding="12dp" />
+        android:padding="12dp"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/passwordEditText"
@@ -36,7 +38,8 @@
         android:layout_marginTop="16dp"
         android:hint="Password"
         android:inputType="textPassword"
-        android:padding="12dp" />
+        android:padding="12dp"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/signInButton"
@@ -46,7 +49,8 @@
         android:layout_below="@id/passwordEditText"
         android:layout_marginTop="24dp"
         android:text="sign in"
-        android:background="@color/green"/>
+        android:background="@color/green"
+        tools:ignore="HardcodedText" />
 
 
     <TextView
@@ -59,7 +63,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:clickable="true"
-        android:onClick="redirectToSignUp" />
+        android:onClick="redirectToSignUp"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/forgotPasswordTextView"
@@ -71,7 +76,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:clickable="true"
-        android:onClick="redirectToForgotPassword" />
+        android:onClick="redirectToForgotPassword"
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>
 

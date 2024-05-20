@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".edit_here">
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/buttonBackEditHere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_below="@id/buttonBackEditHere"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        />
+
+    <!-- Menu Date TextView -->
+    <TextView
+        android:id="@+id/textViewMenuDateEditHere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu Date"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        />
+
+    <!-- Food Type TextView -->
+    <TextView
+        android:id="@+id/textViewFoodTypeEditHere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Type"
+        android:textSize="18sp"
+        android:layout_below="@id/textViewMenuDateEditHere"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Main Dish EditText -->
+    <EditText
+        android:id="@+id/editTextMainDishEditHere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Main Dish"
+        android:layout_below="@id/textViewFoodTypeEditHere"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Side Dish EditText -->
+    <EditText
+        android:id="@+id/editTextSideDishEditHere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Side Dish"
+        android:layout_below="@id/editTextMainDishEditHere"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Soup EditText -->
+    <EditText
+        android:id="@+id/editTextSoupEditHere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Soup"
+        android:layout_below="@id/editTextSideDishEditHere"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Dessert/Fruit EditText -->
+    <EditText
+        android:id="@+id/editTextDessertFruitEditHere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dessert/Fruit"
+        android:layout_below="@id/editTextSoupEditHere"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Calorie Count EditText -->
+    <EditText
+        android:id="@+id/editTextCalorieCountEditHere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Calorie Count"
+        android:layout_below="@id/editTextDessertFruitEditHere"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/buttonSaveChanges"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:text="  Save Changes  "
+        android:layout_below="@id/editTextCalorieCountEditHere"
+        android:layout_marginTop="16dp"
+        android:onClick="saveChanges"
+        android:background="@color/blue"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>
