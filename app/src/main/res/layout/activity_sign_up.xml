@@ -9,6 +9,7 @@
     android:orientation="vertical"
     >
 
+
     <ImageView
         android:id="@+id/logoImageView"
         android:layout_width="100dp"
@@ -19,16 +20,31 @@
         android:contentDescription="logo_description"
         tools:ignore="HardcodedText" />
 
+    <TextView
+        android:id="@+id/textViewRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/logoImageView"
+        tools:ignore="HardcodedText" />
+
     <EditText
         android:id="@+id/usernameEditText_reg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logoImageView"
+        android:layout_below="@id/textViewRegister"
         android:layout_marginTop="32dp"
         android:hint="Email address"
         android:inputType="text"
         android:padding="12dp"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+
+        />
 
     <EditText
         android:id="@+id/passwordEditText_reg"
@@ -50,6 +66,7 @@
         android:layout_below="@id/passwordEditText_reg"
         android:layout_marginTop="24dp"
         android:text="sign up"
+        android:textColor="@color/white"
         android:background="@color/green"
         tools:ignore="HardcodedText" />
 

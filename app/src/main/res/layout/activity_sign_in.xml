@@ -50,7 +50,8 @@
         android:layout_marginTop="24dp"
         android:text="sign in"
         android:background="@color/green"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:textColor="@color/white"/>
 
 
     <TextView

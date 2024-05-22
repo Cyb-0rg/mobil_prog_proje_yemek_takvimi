@@ -82,7 +82,8 @@ tools:context=".add_new_menu">
         android:text="Select Date"
         android:textSize="16sp"
         android:background="?android:attr/selectableItemBackground"
-        android:padding="12dp" />
+        android:padding="12dp"
+        app:drawableEndCompat="@drawable/baseline_calendar_month_24"    />
 
 <!--    <DatePicker
         android:id="@+id/datePickerMenuDate"
@@ -101,7 +102,9 @@ tools:context=".add_new_menu">
         android:layout_marginTop="16dp"
         android:text="Add Menu"
         tools:ignore="HardcodedText"
-        android:onClick="add_menu"/>
+        android:onClick="add_menu"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white"/>
 
 </RelativeLayout>
 </ScrollView>

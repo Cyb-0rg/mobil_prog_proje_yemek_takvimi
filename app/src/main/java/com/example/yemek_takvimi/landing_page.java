@@ -50,7 +50,7 @@ public class landing_page extends AppCompatActivity {
         int day = calendar.get(Calendar.DAY_OF_MONTH);
 
         DatePickerDialog datePickerDialog = new DatePickerDialog(this, (view, year1, month1, dayOfMonth) -> {
-            String selectedDate = dayOfMonth + "/" + (month1 + 1) + "/" + year1;
+            String selectedDate = dayOfMonth + "/" + (month1 + 1) + "/" + year1 + "  ";
             textViewSelectDate.setText(selectedDate);
             displayMenuForSelectedDate(selectedDate);
         }, year, month, day);
@@ -62,7 +62,7 @@ public class landing_page extends AppCompatActivity {
     }
 
     private void displayMenuForSelectedDate(String selectedDate) {
-        databaseReference.orderByChild("MenuDate").equalTo(selectedDate).addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseReference.orderByChild("MenuDate").equalTo(selectedDate.trim()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 boolean foundNonVeg = false;

@@ -6,47 +6,72 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical"
-    >
+    android:background="?android:attr/windowBackground"
+    android:padding="16dp">
 
-
+    <!-- Welcome TextView -->
     <TextView
         android:id="@+id/welcomeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome to Food Menu Calendar!"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="50dp"
+        android:textColor="?android:attr/textColorPrimary" />
 
+    <!-- Add Menu Button -->
     <Button
         android:id="@+id/addMenuButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add Menu"
+        android:textColor="?android:attr/colorError"
+        android:textSize="18sp"
         android:layout_below="@id/welcomeTextView"
         android:layout_marginTop="32dp"
-        />
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/light_gray"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
 
+    <!-- View & Edit Menu Button -->
     <Button
         android:id="@+id/viewMenuButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="View &amp; Edit Menu"
         android:layout_below="@id/addMenuButton"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/light_gray"
+        android:textColor="?android:attr/colorError"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
 
+    <!-- Sign Out Button -->
     <Button
         android:id="@+id/signOutButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign Out"
-        android:textColor="@color/red"
+        android:background="@drawable/button_background"
         android:layout_below="@id/viewMenuButton"
-        android:layout_marginTop="16dp" />
-
-
+        android:layout_marginTop="16dp"
+        android:backgroundTint="?android:attr/colorError"
+        android:textColor="@android:color/white"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
 
 </RelativeLayout>
-

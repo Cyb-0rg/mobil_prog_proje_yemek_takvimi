@@ -81,7 +81,7 @@ public class add_new_menu extends AppCompatActivity {
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         // Update the TextView with the selected date
                         calendar.set(year, month, dayOfMonth);
-                        String selectedDate = dayOfMonth + "/" + (month + 1) + "/" + year;
+                        String selectedDate = dayOfMonth + "/" + (month + 1) + "/" + year ;
                         textViewMenuDate.setText(selectedDate);
                     }
                 },

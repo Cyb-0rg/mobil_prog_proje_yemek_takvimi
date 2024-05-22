@@ -11,12 +11,9 @@
         android:id="@+id/buttonBackEditHere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:text="Back"
-        android:layout_below="@id/buttonBackEditHere"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="16dp"
-        />
+        tools:ignore="HardcodedText" />
 
     <!-- Menu Date TextView -->
     <TextView
@@ -26,7 +23,8 @@
         android:text="Menu Date"
         android:textSize="18sp"
         android:layout_marginTop="16dp"
-        />
+        android:layout_below="@+id/buttonBackEditHere"
+        tools:ignore="HardcodedText" />
 
     <!-- Food Type TextView -->
     <TextView
@@ -36,7 +34,8 @@
         android:text="Food Type"
         android:textSize="18sp"
         android:layout_below="@id/textViewMenuDateEditHere"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        tools:ignore="HardcodedText" />
 
     <!-- Main Dish EditText -->
     <EditText
@@ -45,7 +44,8 @@
         android:layout_height="wrap_content"
         android:hint="Main Dish"
         android:layout_below="@id/textViewFoodTypeEditHere"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        tools:ignore="HardcodedText" />
 
     <!-- Side Dish EditText -->
     <EditText
@@ -54,7 +54,8 @@
         android:layout_height="wrap_content"
         android:hint="Side Dish"
         android:layout_below="@id/editTextMainDishEditHere"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        tools:ignore="HardcodedText" />
 
     <!-- Soup EditText -->
     <EditText
@@ -63,7 +64,8 @@
         android:layout_height="wrap_content"
         android:hint="Soup"
         android:layout_below="@id/editTextSideDishEditHere"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        tools:ignore="HardcodedText" />
 
     <!-- Dessert/Fruit EditText -->
     <EditText
@@ -72,7 +74,8 @@
         android:layout_height="wrap_content"
         android:hint="Dessert/Fruit"
         android:layout_below="@id/editTextSoupEditHere"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        tools:ignore="HardcodedText" />
 
     <!-- Calorie Count EditText -->
     <EditText
@@ -81,7 +84,8 @@
         android:layout_height="wrap_content"
         android:hint="Calorie Count"
         android:layout_below="@id/editTextDessertFruitEditHere"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        tools:ignore="HardcodedText" />
 
     <!-- Save Button -->
     <Button
@@ -93,7 +97,8 @@
         android:layout_below="@id/editTextCalorieCountEditHere"
         android:layout_marginTop="16dp"
         android:onClick="saveChanges"
-        android:background="@color/blue"
-        android:textColor="@color/white"/>
+        android:background="@color/green"
+        android:textColor="@color/white"
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>

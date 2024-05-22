@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void redirectToSignUp() {
-        Intent intent = new Intent(MainActivity.this, landing_page.class);
+        Intent intent = new Intent(MainActivity.this, sign_up.class);
         startActivity(intent);
         finish(); // Optional: finish the MainActivity so that the user can't go back to it using the back button
 

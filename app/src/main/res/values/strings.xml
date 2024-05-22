@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">yemek takvimi</string>
+    <string name="app_name">Yemek Takvimi</string>
     <string name="sign_in">Sign in</string>
     <string name="sign_up_prompt">sign up here</string>
 </resources>

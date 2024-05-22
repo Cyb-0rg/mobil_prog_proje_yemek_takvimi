@@ -63,7 +63,8 @@
                     android:layout_height="wrap_content"
                     android:text="Today's Menu - [Selected Date]"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
 
 
 
@@ -72,31 +73,36 @@
                     android:id="@+id/textViewMainDishEditMenu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Main Dish: [Main Dish Details]" />
+                    android:text="Main Dish: [Main Dish Details]"
+                    android:textSize="16sp"/>
 
                 <TextView
                     android:id="@+id/textViewSideDishEditMenu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="side Dish: [side Dish Details]" />
+                    android:text="side Dish: [side Dish Details]"
+                    android:textSize="16sp"/>
 
                 <TextView
                     android:id="@+id/textViewdessertEditMenu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="dessert: [dessert Details]" />
+                    android:text="dessert: [dessert Details]"
+                    android:textSize="16sp"/>
 
                 <TextView
                     android:id="@+id/textViewSoupEditMenu12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Soup: [soup Details]" />
+                    android:text="Soup: [soup Details]"
+                    android:textSize="16sp"/>
 
                 <TextView
                     android:id="@+id/textViewCalorieEditMenu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="calories: [calories Details]" />
+                    android:text="calories: [calories Details]"
+                    android:textSize="16sp"/>
 
                 <!-- Add more TextViews for other menu details -->
 

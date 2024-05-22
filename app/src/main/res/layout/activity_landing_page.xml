@@ -1,144 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical"
-      android:padding="16dp">
-
-    <!-- Date Placeholder -->
-    <TextView
-        android:id="@+id/textViewSelectDate"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        android:text="Select Date"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        android:padding="16dp"
-
-        android:layout_marginBottom="16dp" />
-
-    <!-- Show Menu Button -->
-<!--    <Button
-        android:id="@+id/buttonShowMenu"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        android:text="Show Menu"
-        android:backgroundTint="@color/green"
-        android:textColor="@android:color/white"
-        android:layout_marginBottom="30dp" />-->
-
-    <!-- Menu Card for Non-Vegetarian -->
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:orientation="vertical"
         android:padding="16dp">
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:orientation="vertical">
 
+
+        <!-- Large Food Emoji -->
+        <ImageView
+            android:id="@+id/imageViewFoodEmoji"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/face_savouring_delicious_food"
+            android:contentDescription="Food Emoji"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Header Text with "Afiyet Olsun!" -->
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/textViewHeader"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Non-Vegetarian Menu"
-            android:textSize="18sp"
+            android:text="Afiyet Olsun!"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:layout_marginBottom="10dp" />
+            android:layout_gravity="center"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginBottom="24dp"
+            />
 
-        <!-- Non-Vegetarian Menu Details -->
+        <!-- Date Placeholder -->
         <TextView
-            android:id="@+id/textViewNonVegMainDish"
+            android:id="@+id/textViewSelectDate"
             android:layout_width="wrap_content"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:text="Main Dish: N/A" />
+            android:text="Select Date  "
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            tools:ignore="HardcodedText"
+            app:drawableEndCompat="@drawable/baseline_calendar_month_24" />
 
-        <TextView
-            android:id="@+id/textViewNonVegSideDish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Side Dish: N/A" />
+        <!-- Show Menu Button -->
+        <!--    <Button
+                android:id="@+id/buttonShowMenu"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Show Menu"
+                android:backgroundTint="@color/green"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="30dp" />-->
 
-        <TextView
-            android:id="@+id/textViewNonVegDessert"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dessert: N/A" />
-
-        <TextView
-            android:id="@+id/textViewNonVegSoup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Soup: N/A" />
-
-        <TextView
-            android:id="@+id/textViewNonVegCalorie"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Calories: N/A" />
-      </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <!-- Menu Card for Vegetarian -->
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:padding="16dp">
-
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:orientation="vertical">
-
-        <TextView
+        <!-- Menu Card for Non-Vegetarian -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Vegetarian Menu"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginTop="16dp"
+            android:padding="16dp">
 
-        <!-- Vegetarian Menu Details -->
-        <TextView
-            android:id="@+id/textViewVegMainDish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Main Dish: N/A" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textViewVegSideDish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Side Dish: N/A" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Non-Vegetarian Menu"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp" />
 
-        <TextView
-            android:id="@+id/textViewVegDessert"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dessert: N/A" />
+                <!-- Non-Vegetarian Menu Details -->
+                <TextView
+                    android:id="@+id/textViewNonVegMainDish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Main Dish: N/A"
+                    android:textSize="16sp"/>
 
-        <TextView
-            android:id="@+id/textViewVegSoup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Soup: N/A" />
+                <TextView
+                    android:id="@+id/textViewNonVegSideDish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Side Dish: N/A"
+                    android:textSize="16sp"/>
 
-        <TextView
-            android:id="@+id/textViewVegCalorie"
-            android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textViewNonVegDessert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dessert: N/A"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/textViewNonVegSoup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Soup: N/A"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/textViewNonVegCalorie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calories: N/A"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Menu Card for Vegetarian -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Calories: N/A" />
-      </LinearLayout>
-    </androidx.cardview.widget.CardView>
-  </LinearLayout>
+            android:layout_marginTop="16dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vegetarian Menu"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- Vegetarian Menu Details -->
+                <TextView
+                    android:id="@+id/textViewVegMainDish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Main Dish: N/A" />
+
+                <TextView
+                    android:id="@+id/textViewVegSideDish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Side Dish: N/A" />
+
+                <TextView
+                    android:id="@+id/textViewVegDessert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Dessert: N/A" />
+
+                <TextView
+                    android:id="@+id/textViewVegSoup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Soup: N/A" />
+
+                <TextView
+                    android:id="@+id/textViewVegCalorie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Calories: N/A" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 </ScrollView>
